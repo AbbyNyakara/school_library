@@ -1,7 +1,7 @@
 # rubocop:disable all
 
 class Person
-  def initialize(name = "Unknown", age, parent_permission = true)
+  def initialize(age, name = "Unknown", parent_permission = true)
     @id = rand(1..10000)
     @name = name
     @age = age
