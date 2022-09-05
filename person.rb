@@ -1,6 +1,6 @@
 class Person
-  def initialize(id, name = "Unknown", age, parent_permission : true)
-    @id = id
+  def initialize(name = "Unknown", age, parent_permission : true)
+    @id = rand(1..10000)
     @name = name
     @age = age
     @parent_permission = parent_permission
@@ -14,11 +14,7 @@ class Person
 
   # define the public method first
   def can_use_services?
-    if is_of_age? || @parent_permission = true
-      true
-    else
-      false
-    end
+    is_of_age? || @parent_permission
   end
 
   # define private method 
