@@ -1,5 +1,5 @@
 class Person
-  def initialize(id, name = "Unknown", age, parent_permission = true)
+  def initialize(id, name = "Unknown", age, parent_permission : true)
     @id = id
     @name = name
     @age = age
@@ -10,13 +10,11 @@ class Person
   attr_reader :id
 
   # Getter and setter method for name, age
-  attr_accessor :name
-  attr_accessor :age
- 
+  attr_accessor :name, :age
 
   # define the public method first
   def can_use_services?
-    if is_of_age = true || @parent_permission = true
+    if is_of_age? || @parent_permission = true
       true
     else
       false
@@ -24,14 +22,10 @@ class Person
   end
 
   # define private method 
-  private
-
-  def is_of_age
-    if @age >= 18
-      true
-    else
-      false
-    end
+  def is_of_age?
+    @age >= 18
   end
+
+  private @is_of_age?
 
 end
