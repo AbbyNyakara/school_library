@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 class Nameable
   def correct_name
     raise NotImplementedError
@@ -38,6 +40,7 @@ class NameableBaseDecorator < Nameable
   attr_accessor :nameable
 
   def initialize(nameable)
+    super()
     @nameable = nameable
   end
 
@@ -61,7 +64,7 @@ end
 
 person = Person.new(22, 'maximilianus')
   person.correct_name
-  capitalizedPerson = CapitalizeDecorator.new(person)
-  capitalizedPerson.correct_name
-  capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-  capitalizedTrimmedPerson.correct_name
+  capitalized_person = CapitalizeDecorator.new(person)
+  capitalized_person.correct_name
+  capitalized_trimmed_person = TrimmerDecorator.new(capitalizedPerson)
+  capitalized_trimmed_person.correct_name
