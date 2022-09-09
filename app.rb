@@ -63,7 +63,7 @@ def create_rental(books, people, rentals)
   selected_person = gets.chomp.to_i
   print 'date:'
   provided_date = gets.chomp
-  rentals.push(Rental.new(provided_date, people[selected_person], books[selected_book]))
+  rentals.push(Rental.new(provided_date, books[selected_book], people[selected_person]))
   puts ' rental created succesfully'
 end
 
