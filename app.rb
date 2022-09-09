@@ -13,7 +13,7 @@ end
 
 def list_all_people(people)
   if people.empty?
-    puts "There are no people listed"
+    puts 'There are no people listed'
   else
     people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
   end
